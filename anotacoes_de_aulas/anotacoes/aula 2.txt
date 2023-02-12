@@ -1,0 +1,6 @@
+Tipos e Resolvers
+
+TypeDefs --> vai conter a query que vai declarar as nossas propriedades e seus respectivos tipos.
+
+Resolvers --> precisa de um contexto (no exemplo, o contexto é "Query") e dentro dele teremos métodos que retornaram o valor de determinada propriedade.
+

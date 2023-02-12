@@ -1,0 +1,7 @@
+Instalação dos componentes a serem utilizados.
+
+Montagem simples da query e resolver para termos o Hello World.
+
+Servidor de testes é o apollo, acessível após dar npm start no localhost:4000.
+
+Para acessar o server é necessário mudar a entrada "main" no package.json para o nome da index da aula (index_a1, index_a2,...)
