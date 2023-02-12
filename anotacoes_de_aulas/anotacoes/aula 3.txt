@@ -1,0 +1,8 @@
+Arrays e Non nulls
+
+Arrays são declarados dentro da Query com "[TIPO]", exemplo: [String]
+
+Para garantir que a resolução dessa propriedade seja não nula, basta adicionarmos "!" após o último colchete, exemplo: [String]!
+
+Para garantir que dentro de cada elemento do array tenha o tipo correto, fazemos o mesmo só que após a palavra String, exemplo: [String!]!
+
