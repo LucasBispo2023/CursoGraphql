@@ -1,0 +1,12 @@
+Schema
+
+ - Schema é um módulo que define um objeto, escrito na linguagem SDL (Schema Definition Language).
+
+ - Nele teremos as propriedades, tipos e estrutura da sua API.
+
+ - A diferença entre Schema e uma Classe é que a classe é feita na linguagem de programação do projeto e possui métodos, enquanto um Schema é feito em SDL e não possui métodos.
+
+ - Os métodos e lógicas são realizada nos resolvers.
+
+ - Em suma, Schema é um contrato entre o servidor e cliente, especificando quais e dados a API possui e como eles estão estruturados.
+
