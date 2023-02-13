@@ -1,0 +1,14 @@
+Arguments
+
+Como fazer para, numa consulta, obter determinado usuário ou determinado produto.
+
+O resolver passa dois argumentos: o primeiro é o parent e o segundo os próprios argumentos.
+Para pesquisar um usuário determinado, eu passo nos argumentos (campo args) do método:
+
+Query: {
+    usuario(obj, args) {
+        return ...
+    }
+}
+
+Nas proximas aulas veremos o que é esse "obj", então por enquanto teremos um _ no lugar dele.
