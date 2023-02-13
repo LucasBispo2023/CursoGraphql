@@ -1,0 +1,26 @@
+Primeiro parametro do resolver (obj)
+
+Cenário:
+
+No banco de dados dos produtos mudaram o campo "quantidade" para "quantidade_estoque", e agora?
+
+Solução:
+
+Criar um resolver específico para um objeto. 
+
+    Produto: {
+        quantidade(obj) {
+            return obj.quantidade_estoque;
+        },
+    },
+
+Então quando chamarmos a 
+    Query: {
+        produto(){
+            return db[0];
+        }
+    }
+
+E quando tivermos a resposta, a propriedade quantidade de produto vai ser a mesma da quantidade_estoque (nome da propriedade que está no banco de dados).
+
+O primeiro parametro para Query é Undefined ou Null.
