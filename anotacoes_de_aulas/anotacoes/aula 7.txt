@@ -1,0 +1,40 @@
+Fragments e Aliases
+
+    - Numa consulta, queremos pegar as informações dos dois usuarios, mas não podemos fazer a query da seguinte forma:
+
+    query {
+        usuario(id: 1) {
+            id nome idade ativo
+        },
+        usuario(id: 2) {
+            id nome idade ativo
+        }
+    }
+
+    Mas sim, utilizando um Aliase:
+
+    query {
+        primeiroUsuario: usuario(id: 1){
+            id nome idade ativo
+        },
+        segundoUsuario: usuario(id: 2){
+            id nome idade ativo
+        }
+    }
+
+    - Já o fragment é o agrupamento de propriedades para evitar repetição de código e se define no fim da consulta:
+
+    fragment usuarioCompleto on Usuario {
+        id nome idade ativo
+    }
+
+    e para utilizar isso na consulta utilizamos "..." antes:
+
+    query {
+        primeiroUsuario: usuario(id: 1){
+            ...usuarioCompleto
+        },
+        segundoUsuario: usuario(id:2){
+            ...usuarioCompleto
+        }
+    }
