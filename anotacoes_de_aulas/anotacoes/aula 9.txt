@@ -1,0 +1,37 @@
+Diretivas e Variáveis
+
+ - A documentação recomenda utilizarmos variáveis na hora de efetura uma query da seguinte forma: 
+
+ - Ao invés de:
+    query pesquisaDeUsuario{
+        usuario(id: 1) {
+            id nome ativo
+        }
+    }
+
+    Fazer:
+    query pesquisaDeUsuario($id: Int){
+        usuario(id: $id) {
+            id nome ativo
+        }
+    }
+    
+    E a variável é definida no playground na parte "Query Variables" na forma JSON:
+    {
+        "id": 1,
+    }
+
+ - Mas, e se não quisermos mostrar o Perfil toda vez? Podemos usar diretivas para fazer com que Perfil seja mostrado apenas se satisfazer uma condicional:
+
+    query pesquisaDeUsuario($id: ID, $comPerfil: Boolean!) {
+    usuario(id:$id) {
+        ...usuarioCompleto,
+        perfil @include(if: $comPerfil) {
+        id descricao
+        }
+    },
+    }
+
+    - Note que é necessário utilizar o "!" no Boolean, pois como a diretiva "@include(if:)" vai precisar desse valor booleano, não podemos nunca receber outro tipo de valor.
+
+ - Da mesma forma, temos a diretiva @skip(if:) que é o oposto da @include, ou seja, serve para pular aquele campo (e não mostrar) dependendo de uma variável booleana.

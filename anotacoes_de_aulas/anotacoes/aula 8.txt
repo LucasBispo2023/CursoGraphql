@@ -1,0 +1,25 @@
+Operation Name & Enums
+
+ - Operation Name - nome das nossas operações. Isso ajuda a fazer o debug no nosso backend.
+ - Basta colocar o nome na query, exemplo:
+
+ query pedidoDaVenda {
+    usuarios {
+        id nome quantidade
+    }
+ }
+
+ - Enums é um tipo especial de escalar, ou a um conjunto de valores permitidos. Por exemplo, nosso Perfil só pode ter os valores "Admin" ou "Normal".
+ - Então vamos utilizar o Enum para validar esses valores. Pra fazer isso, na nossa definição de tipos, acrescentamos:
+
+ const typeDefs = gql ` 
+
+    enum TipoDePerfil {
+        ADMIN NORMAL
+    }
+
+    type Perfil {
+        id: Int,
+        descricao: TipoDePerfil
+    }
+`;
