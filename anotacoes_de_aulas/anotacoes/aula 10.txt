@@ -18,4 +18,4 @@ ORGANIZANDO O NOSSO CÓDIGO
                 -USUARIO
                     schema.gql (definição de usuario e a parte de query referente a usuario)
                     resolvers.js (resolvers referentes ao usuario)
-        index.js ()
+        index.js (arquivo que junta os resolvers e tipos. Explicação das linhas no próprio arquivo)

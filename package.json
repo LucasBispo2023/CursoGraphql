@@ -2,7 +2,7 @@
   "name": "curso-washington-developer",
   "version": "1.0.0",
   "description": "",
-  "main": "anotacoes_de_aulas/codigos/index_a9",
+  "main": "anotacoes_de_aulas/codigos/aula 11/index_a11.js",
   "scripts": {
     "start": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"

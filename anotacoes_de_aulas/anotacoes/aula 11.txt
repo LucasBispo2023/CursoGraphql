@@ -1,0 +1,5 @@
+MUTATIONS
+
+ - As mutations ficarão nos arquivos Schema e resolvers do nosso projeto.
+ - Elas também precisam ser definidas no tipo, e tipo serem resolvidas.
+ 
