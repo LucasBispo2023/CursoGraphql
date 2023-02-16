@@ -1,0 +1,21 @@
+ORGANIZANDO O NOSSO CÓDIGO
+
+ - É importante que o graphql tenha acesso a todos os tipos e resolvers para executar as dependencias (como usuario precisar de perfil que precisa de tipo de perfil).
+
+ - Para isso vamos utilizar a biblioteca "@graphql-toolkit/schema","@graphql-toolkit/utils", "@graphql-toolkit/merge","@graphql-toolkit/load-files" e  para separar esse conteúdo e fazer um merge deles após.
+
+ - Então depois de instalada a biblioteca vamos criar uma pasta, normalmente chamada de src, mas aqui será dentro da "aula 10". E Dentro desta pasta teremos várias subpastas para nossa organização:
+
+    - SRC
+        -DB
+            index.js (module.exports nossa variavel db)
+        -GRAPHQL
+            -MODULES
+                -PERFIL
+                    schema.gql (definição de perfil e a parte de query referente a perfil)
+                    resolvers.js (resolvers referentes ao perfil)
+
+                -USUARIO
+                    schema.gql (definição de usuario e a parte de query referente a usuario)
+                    resolvers.js (resolvers referentes ao usuario)
+        index.js ()
