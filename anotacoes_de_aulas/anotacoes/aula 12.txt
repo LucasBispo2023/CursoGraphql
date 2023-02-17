@@ -1,0 +1,21 @@
+EVITANDO USUÁRIO DUPLICADO
+
+ - Para fazer essa verificação é bem simples: basta atribuirmos uma variável "usuarioExistente" utilizando a função ".some()", e passar como parâmetro um usuário, tal 
+ que o campo do usuário a ser verificado seja igual ao campo do novo objeto a ser cadastrado, exemplo:
+
+    const usuarioExistente = db.usuarios.some(usuario => usuario.email === args.email);
+
+ - Então fazemos uma verificação if() para, caso esse usuarioExistente não seja nulo lançar um novo error (throw new Error(`Mensagem de erro: ${args.email}`)).
+
+ - Mas quando fazemos apenas isso o cliente recebe muita informação sobre o erro, e é legal ter apenas o erro, então lá no nosso arquivo principal vamos colocar,
+ junto com a definição do server ApolloServer o seguinte:
+
+    const server = new ApolloServer ({ 
+        ...graphql,
+        format error: (err) => {
+            if(err.message.startWith(`Mensagem de erro desejada:`)) {
+                return Error(err.mesage);
+            }
+        }
+    })
+    
