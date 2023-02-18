@@ -1,5 +1,5 @@
 const {ApolloServer} = require('apollo-server');
-const graphql = require('../aula 14/src/graphql');
+const graphql = require('./src/graphql');
 const server = new ApolloServer({
     ...graphql,
     formatError: (err) => {
