@@ -1,0 +1,36 @@
+TYPE INPUT
+
+ - Ele ajuda para agrupar propriedades comuns para atualizar, criar ou deletar usuários.
+ - Isso serve para evitar repetição de código.
+
+ - A sintáxe é simples e utiliza a palavra reservada "input":
+
+    input UsuarioInput {
+        nome: String,
+        idade: Int,
+        ativo: Boolean
+    }
+
+    E para ser utilizada numa mutation, por exemplo, utilizamos ela junto ao parâmetro "data":
+
+    type Mutation {
+        atualizarUsuario(id: Int!, data: UsuarioInput) : Usuario! // o id é necessário para saber qual usuário será alterado.
+    }
+
+    Para resolver essa mutation:
+
+    Mutation: {
+        atualizarUsuario(_,{id,data}) {
+            const usuario = db.usuarios.find(u => u.id === id);
+            const index = db.usuarios.findIndex(u => u.id === id);
+
+            const novoUsuario = {
+                ...usuario,
+                ...data
+            }
+
+            db.usuarios.splice(index,1,novoUsuario);
+
+            return novoUsuario
+        }
+    }
