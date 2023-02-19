@@ -1,13 +1,11 @@
 const {ApolloServer} = require('apollo-server');
 const graphql = require('./src/graphql');
+const ContactRegisterService = require('./src/graphql/services/contactRegisterService');
 const server = new ApolloServer({
     ...graphql,
-    formatError: (err) => {
-        if(err.message.startsWith(`Usuario já possui nome cadastrado:`)){
-            return Error(err.message);
-        }
-        return err;
-    }
+    context: () => ({
+        contactRegisterService: ContactRegisterService,
+    }),
 });
 
 server.listen();

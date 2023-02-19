@@ -1,0 +1,13 @@
+Anotações Sobre o Projeto de contatos
+
+- Estamos utilizando services para deixar todos os métodos num luguar para o código ficar limpo.
+
+- Argumentos context e info:
+
+    - Context - Carrega informações em comum para todos os resolvers, como usuário logado, acesso a serviços e banco de dados.
+
+    - Info - Disponibiliza informações específicas de campos relevantes para a pesquisa atual
+
+- No nosso projeto, vamos injetar o service que criamos no contexto para deixar o código mais elegante e para facilitar teste unitários.
+
+- No nosso service, usamos o banco de dados "db" no construtor do service, isso se chama, injetar o db pra dentro do service.
