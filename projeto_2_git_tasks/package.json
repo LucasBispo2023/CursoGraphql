@@ -1,0 +1,28 @@
+{
+  "name": "curso-washington-developer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "projeto_2_git_tasks/index.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "@graphql-tools/load": "^7.8.12",
+    "@graphql-tools/load-files": "^6.6.1",
+    "@graphql-tools/merge": "^8.3.18",
+    "@graphql-tools/schema": "^9.0.16",
+    "@graphql-tools/utils": "^9.2.1",
+    "apollo-datasource-rest": "^3.7.0",
+    "apollo-server": "^3.11.1",
+    "graphql": "^16.6.0",
+    "knex": "^2.4.2",
+    "pg": "^8.9.0"
+  }
+}
