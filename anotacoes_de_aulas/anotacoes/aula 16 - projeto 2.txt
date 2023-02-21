@@ -23,3 +23,5 @@ ANOTAÇÕES DO PROJETO GIT TASKS
    - É feita a verificação caso o usuário já esteja no banco de dados, em caso negativo ele é buscado na API e adicionando no banco.
 
  Listando as tasks:
+   - De maneira simples, criamos um service que recebe um user e retorna todas as tasks em que o user_id seja igual ao user.id (note que no resolver o argumento a ser 
+   passado é o obj, ou seja, o primeiro parametro).
