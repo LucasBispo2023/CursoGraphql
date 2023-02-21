@@ -5,13 +5,8 @@ type User {
     tasks: [Task]
 }
 
-type Task {
-    title: String,
-    description: String
-}
 
 type Query {
     user(login: String): User,
     users: [User],
-    tasks: [Task]
 }

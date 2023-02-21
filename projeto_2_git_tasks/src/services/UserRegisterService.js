@@ -1,4 +1,4 @@
-const db = require('../../db');
+const db = require('../db');
 class UserRegisterService {
     async addUser(user) {
         return await ( await db('users').insert(user).returning('*'))[0];

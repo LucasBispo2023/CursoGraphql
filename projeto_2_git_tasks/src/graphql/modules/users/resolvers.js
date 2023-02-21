@@ -1,5 +1,5 @@
 
-const db = require('../../db');
+const db = require('../../../db');
 
 module.exports = {
     Query: {
@@ -23,7 +23,7 @@ module.exports = {
     },
     User: {
         async tasks(user,_,{dataSources}) {
-            return await dataSources.taskRegisterService.getTasks(user.id);
+            return await dataSources.tasksRegisterService.getTasks(user.id);
         }
     }
 }
