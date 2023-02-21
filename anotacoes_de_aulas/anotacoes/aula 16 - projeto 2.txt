@@ -1,0 +1,25 @@
+ANOTAÇÕES DO PROJETO GIT TASKS
+
+ Requisitos:
+    - Usuário precisa ter uma conta no github, porque vamos utilizar a api de lá.
+
+ O que faremos:
+    - criar uma aplicação que associe um usuário contendo id, login e avatar_url a várias tarefas que contenham id title e description.
+
+ Começando o projeto:
+    - Criar as migrations (npx knex migrate:make create_table_users e npx knex migrate:make create_table_tasks)
+    - Editar as migrations
+    - Migrar as migrations.
+    - Fazer os modules schema e resolvers
+
+ Data Source:
+   - Neste projeto utilizaremos o data source que é o armazenamento em cache do resultado parcial da query. Todos os services vão ser utilizados no dataSource e não no context,
+   por que no context teremos a autenticação do usuário.
+   - Necessário instalar a dependencia Data Source npm install apollo-datasource-rest
+   - Documentação necessária: https://www.apollographql.com/docs/apollo-server/v2/data/data-sources/#restdatasource-reference
+
+ Adicionando Users no nosso banco de dados para evitar que sempre batesse na api:
+   - criar um service para buscar um user pelo login e para adicionar ao banco de dados.
+   - É feita a verificação caso o usuário já esteja no banco de dados, em caso negativo ele é buscado na API e adicionando no banco.
+
+ Listando as tasks:
