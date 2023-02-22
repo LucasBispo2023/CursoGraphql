@@ -25,3 +25,10 @@ ANOTAÇÕES DO PROJETO GIT TASKS
  Listando as tasks:
    - De maneira simples, criamos um service que recebe um user e retorna todas as tasks em que o user_id seja igual ao user.id (note que no resolver o argumento a ser 
    passado é o obj, ou seja, o primeiro parametro).
+
+ CRUD das TASKS:
+   - Para garantir a segurança de que um user nao pode mexer na tarefa de outro user utilizaremos o context para pegar os headers de toda requisição, obtendo o user_id
+   do usuário autenticado.
+
+ CRIANDO A CLASSE DE ERROS  
+   - Criamos uma pasta em src de erros e colocamos as classes de sem permissão e tarefa não encontrada lá. Após implementá-las vamos atualizar o service.
